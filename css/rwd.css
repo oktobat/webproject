@@ -1,0 +1,487 @@
+@media screen and (max-width:1024px) {
+
+   #header { border:0px solid #000; 
+        padding:0px 0; position:sticky; top:0; z-index:999; background:#fff; box-shadow:0 1px 1px #ddd;   }
+   #header .opennav { display:block; 
+        position:absolute; top:0px; left:10px;
+        font-size:20px; }
+   #header .mobnavclose { display:block; 
+        position:absolute; top:-2px; left:300px; 
+   }     
+   #header .mobnavclose i { font-size:40px }
+
+   #header h1 { float:none; margin-top:20px; text-align:center; } 
+   #header h1 img { width:200px; }
+
+   #header .mobnav { display:block; position:fixed; 
+        top:0; left:-340px; height:100%; width:340px; 
+        background:rgba(0,0,0,0.2);
+        transition:all 0.5s; 
+    }
+    #header .mobnav.on { display:block; position:fixed; 
+        top:0; left:0%; height:100%; width:100%; 
+        background:rgba(0,0,0,0.2)
+    }
+   #header nav { float:none; 
+    background:#fff; width:300px; 
+    height:calc(100% - 50px);
+    overflow-y:auto; 
+    }
+   #header .member { position:static;  
+    /* top:5px; right:0;  */
+        font-size:12px;
+       z-index:9999; 
+       background:#fff;
+       height:50px; width:300px;
+       line-height:50px; 
+       border-bottom:1px solid #ddd; 
+   }
+   #header .member a { margin-left:10px }
+   #header > div { position:relative; }
+   nav .depth1 { overflow:hidden }
+   nav .depth1 > li { font-size:15px; color:#888888; 
+       font-weight:900; 
+       font-family: 'Nanum Gothic', sans-serif;
+       padding:0px 20px; 
+       margin:20px 0; 
+       float:none; 
+       position:relative;
+       transition:all 0.5s; 
+   } 
+   nav .depth1 > li > i { display:block; position:absolute; top:0; right:20px; cursor:pointer}
+   nav .depth1 > li:hover {color:#000; }
+   nav .depth2 { position:static; 
+        /* top:100%; left:0;  */
+        border:1px solid #000;
+       width:100%; background:#333; padding:10px 0; 
+       margin-top:10px; 
+       border-top:3px solid #cda25a;
+       display:none; z-index:999;
+       /* transition:all 0.5s;  */
+   }
+   nav .depth1 > li:hover .depth2 { display:none }
+   
+   nav .depth2 li { font-size:13px; color:#9d9d9d; line-height:3 }
+   nav .depth2 li a { display:block; padding:0 20px; }
+   nav .depth2 li:hover { color:#cda25a }
+   
+   /* 메인화면 섹션 */
+   #section { position:relative;  }
+   #section article:nth-child(2) > div {
+       width:32%; float:left; 
+       border:0px solid #000;
+       text-align:center; overflow:hidden;
+   }
+   #section article:nth-child(2) > div img {
+       transition:all 0.5s; 
+       transform:scale(1)
+   }
+   #section article:nth-child(2) > div:hover img {
+       transform:scale(0.95)
+   }
+   
+   #section article:nth-child(2) > div:nth-child(2) {
+       margin:0 2%; 
+   }
+   
+   #section article:nth-child(3) ul li { width:100%; float:left; margin-top:30px; }
+   #section article:nth-child(3) ul li:nth-child(odd) { margin-right:0% }
+   /* #section article:nth-child(3) ul li h2 { font-size:12px; color:#333; border-bottom:2px solid #000; margin-bottom:10px }
+   #section article:nth-child(3) ul li h2 a {border:1px solid #ddd; padding:8px 15px; display:inline-block; letter-spacing:-0.5px; border-radius:3px 3px 0 0; }
+   #section article:nth-child(3) ul li h2 a:hover { text-decoration:underline } */
+   /* #section article:nth-child(3) ul li table {border:0px solid #000; font-size:12px; table-layout: fixed;}
+#section article:nth-child(3) ul li table td {border:0px solid #000; padding:1px 5px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis;  }
+#section article:nth-child(3) ul li table td:nth-child(2) {width:110px; text-align:center;  }
+#section article:nth-child(3) ul li table td:nth-child(3) {width:60px; text-align:center;  } */
+   
+   #section article:nth-child(4) { padding:30px 0;  }
+   #section article:nth-child(4) dl { font-size:12px; color:#333; }
+   #section article:nth-child(4) dl dt { float:left; clear:both; padding-right:0.5em; }
+   #section article:nth-child(4) dl dd { float:left; }
+   
+   #footer .bottom-menu { padding:30px 0; background:#f1f1f1}
+   #footer .bottom-menu h1 { width:25%; float:left; padding:0 20px;  }
+   #footer .bottom-menu h1 img {
+       /* transition:all 0.5s;  */
+       animation:slideInDown 1s infinite;
+       /* animation-name:slideInDown;
+       animation-duration: 1s;
+       animation-timing-function: ease;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-delay:0s;
+       animation-fill-mode: both; */
+   }
+   #footer .bottom-menu h1:hover img {
+       /* transform:translate(0px, 10px) scale(0.8) rotate(10deg) skew(30deg); */
+       animation-play-state: paused;
+   }
+   
+   
+   #footer .bottom-menu .row div { width:75%; float:left;  }
+   #footer .bottom-menu .depth1 > li { width:33.33%; float:left; 
+       padding:0 20px;
+       border-left:1px solid #999; 
+       height:144px; 
+   }
+   #footer .bottom-menu .depth1 > li > a { font-size:15px; color:#555; font-weight:bold  }
+   #footer .bottom-menu .depth2 { margin:20px 0 0; }
+   #footer .bottom-menu .depth2 li { margin:13px 0; }
+   #footer .bottom-menu .depth2 li a { font-size:13px; color:#888; font-weight:normal;  }
+   #footer .company-info { background:#555; padding:19px; font-size:13px; color:#f1f1f1; border-bottom: 3px solid rgb(166, 36, 67); }
+   #footer .company-info span:nth-child(1) { float:left; }
+   #footer .company-info span:nth-child(2) { float:right; }
+   
+   
+   /* aboutbook 화면 스타일 */
+   #aboutbook { font-size:14px; line-height:1.6; padding:30px 0; }
+   #aboutbook article:nth-child(1) { border-bottom:1px solid #9d9d9d; }
+   #aboutbook article:nth-child(1) p { margin-bottom:20px }
+   #aboutbook article:nth-child(1) p:nth-child(1) strong { 
+       font-size:26px; color:#b22222;
+       display:block; }
+   #aboutbook article:nth-child(1) p:nth-child(3) span {
+       color:#000080; font-weight:bold; }
+   
+   #aboutbook article:nth-child(2) {
+       padding:30px 0
+   }
+   #aboutbook article:nth-child(2) .content {
+       margin-top:30px; 
+   }
+   #aboutbook article:nth-child(2) .content h2 {
+       font-size:18px; color:#800080
+   }
+   #aboutbook article:nth-child(2) .content p {
+       margin-left:40px; 
+   }
+   #aboutbook article:nth-child(2) .content p span { display:block; }
+   
+   
+   /* notice 게시판 */
+   #notice { padding:30px 0}
+   #notice .title { padding:20px 0}
+   #notice .title h2 { font-size:16px; color:#555; line-height:22px; position:relative; padding-left:20px;  }
+   #notice .title h2 span { display:inline-block; width:12px; height:22px; background:#db7093; border-radius:2px;  position:absolute; top:0; left:0 }
+   #notice .title p { font-size:11px; color:#888; position:relative;padding-left:20px; margin-top:3px; line-height:12px; }
+   #notice .title p span { display:inline-block; width:12px; height:12px; background:#db7093; opacity:0.7;  border-radius:2px;  position:absolute; top:0; left:0 }
+   
+   #notice .board col:nth-child(1) { width:43px }
+   #notice .board col:nth-child(2) { width:auto }
+   #notice .board col:nth-child(3) { width:54px }
+   #notice .board col:nth-child(4) { width:80px }
+   #notice .board col:nth-child(5) { width:56px }
+   #notice .board table { font-size:12px; color:#555;
+       border-top:1px solid #ccc;
+       border-bottom:1px solid #ccc;
+   }
+   #notice .board table thead { 
+       background: linear-gradient(to bottom,#fff,#F9F9F9);
+   }
+   #notice .board table th { font-size:11px; color:#333; padding:9px 0px; border-bottom:1px solid #bbb; }
+   #notice .board table td { padding:8px 0px; text-align:center }
+   #notice .board table tbody tr { 
+       border-top:1px solid #eee;
+   }
+   #notice .board table td:nth-child(2) { text-align:left; padding:8px }
+   #notice .board table tbody tr:hover {    background: #F9F9F9; }
+   #notice .btn { font-size:11px; color:#333; margin-top:20px  }
+   #notice .btn a { display:inline-block; padding: 0px 12px;
+       height:27px; 
+       line-height: 24px; border:1px solid #CCC;
+       background: #FCFCFC; letter-spacing: -1px;
+       border-radius:3px; text-shadow: 0 1px 0 #FFF;
+       vertical-align:middle; 
+   }
+   #notice .btn a:hover {
+       border-color: #AAA;
+       box-shadow: 0 1px 4px rgba(0,0,0,.2);
+   }
+   #notice .btn i { 
+       font-size: 14px;
+       vertical-align: middle;
+       color: #9791B9;
+       text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+   }
+   #notice .btn .searchbox { display:inline-block; vertical-align:middle;  }
+   #notice .btn .searchbox fieldset { display:inline-block; 
+       padding: 0;
+       line-height: 24px; border:1px solid #CCC;
+       background: #FCFCFC; letter-spacing: -1px;
+       border-radius:3px; text-shadow: 0 1px 0 #FFF; 
+       position:relative; height:27px; 
+   }
+   #notice .btn .searchbox legend { display:none }
+   #notice .btn .searchbox fieldset input { border:none;
+       height:24px; width:140px; display:none; 
+   }
+   #notice .btn .searchbox fieldset input:focus { outline-color:#db7093 }
+   #notice .btn .searchbox fieldset button { border:none; background:none; margin-left:12px;  }
+   #notice .btn .searchbox fieldset label { margin-right:12px }
+   #notice .btn .searchbox fieldset:hover {
+       border-color: #AAA;
+       box-shadow: 0 1px 4px rgba(0,0,0,.2);
+   }
+   
+   #notice .btn select { border:none; font-size:11px; color:#333; height:25px; background:none; }
+   #notice .btn select:focus {outline-color:#db7093 }
+   
+   /* example.html 페이지 */
+   #example .chapter { background:#dddddd; border-radius:8px; padding:10px; margin:30px 0 10px; text-align:center }
+   #example .chapter li { 
+       display:inline-block; 
+       margin:3px }
+   #example .chapter li a { 
+       display:inline-block; 
+       width: 58px;
+       height: 33px; line-height:33px;
+       color: white;
+       background-color: rgb(51, 51, 51);
+       font-size: 19px;
+       border-radius: 8px;
+       text-align:center;
+   }
+   #example .chapter li.active a {
+       color:yellow;
+   }
+   #example .subchapter ul { background:#e7d3d3; padding:7px; 
+       margin:10px 0; text-align:center;  border-radius: 8px;
+       display:none; 
+   }
+   #example .subchapter ul.active { display:block; }
+   #example .subchapter ul li { display:inline-block; 
+       margin:3px }
+   #example .subchapter ul li a {
+       display:inline-block; 
+       width: 62px;
+       height: 24px; line-height:24px;
+       color: white;
+       background-color: #653333;
+       font-size: 13px;
+       border-radius: 6px;
+       text-align:center;
+   }
+   
+   #example .chapterContent {
+       background:rgb(246,246,180);
+       padding:10px; 
+       border-radius:8px;
+       margin-bottom:30px; 
+    }
+    #example #contentBox .contentList {
+       display:none
+    }
+    #example #contentBox .contentList.active {
+       display:block
+    } 
+    #example #contentBox .contentList .content { display:none } 
+    #example #contentBox .contentList.active .content.active { display:block } 
+   
+   
+   #example #contentBox .contentList .content .title {
+       background:#ffffe6;
+       padding:10px;
+       margin:10px 0; 
+       border-radius:8px;
+    }
+   #example #contentBox .contentList .content .title > div { border-bottom:1px solid #ddd; padding-bottom:10px; margin-bottom:10px }
+   #example #contentBox .contentList .content .title > div h2 { float:left; font-size:17px;  }
+   #example #contentBox .contentList .content .title > div div { float:right }
+   #example #contentBox .contentList .content .title details {
+       font-size:13.5px; 
+   }
+   #example #contentBox .contentList .content .buttons {
+       background:#ffffe6;
+       padding:10px;
+       margin:10px 0; 
+       border-radius:8px;
+       font-size:13.5px
+   }
+   #example #contentBox .contentList .content .buttons > div:nth-child(1) { float:left; }
+   #example #contentBox .contentList .content .buttons > div:nth-child(2) { float:right; }
+   #example #contentBox .contentList .content .buttons > div:nth-child(1) button { background:#e0e0a1; padding:7px 3px 3px;
+       border: 1px solid rgb(150, 150, 110);
+       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+       border-radius: 8px;
+   }
+   #example #contentBox .contentList .content .buttons > div:nth-child(2) button { background:#e0e0e0; padding:7px 3px 3px;
+       border: 1px solid rgb(150, 150, 150);
+       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+       border-radius: 8px;
+   }
+   
+   
+   /* login.html 페이지 */
+   #login .loginbox { max-width:450px; margin:50px auto }
+   #login .loginbox fieldset { border:none }
+   #login .loginbox legend { display:none }
+   #login .loginbox input { width:100%; border:none; 
+       border-bottom:1px solid #000; height:36px; outline:none }
+   #login .loginbox input:focus { border-bottom-color:blue }
+   #login .loginbox form p { position:relative; margin:40px 0; }
+   #login .loginbox form label { position:absolute; top:0; left:0; }
+   #login .loginbox form label.on { position:absolute; top:-12px; left:0;
+       font-size:12px; color:blue
+   }   
+   #login .loginbox form .btn { text-align:center; }
+   #login .loginbox form .btn button {
+       width:280px; height:44px; background-color:#ededed; border-radius:50px;
+   }
+   #login .loginbox .sns_login { margin-top:30px }
+   #login .loginbox .sns_login li a {
+       display:block; height:54px; line-height:54px; text-align:center;
+       color:#fff; border-radius:5px; 
+       margin:5px 0;
+   }
+   #login .loginbox .sns_login li:nth-child(1) a {
+       background:#ffea26 url(../images/ico_kakao.png) no-repeat 10px center/50px 50px; color:#000;
+   }
+   #login .loginbox .sns_login li:nth-child(2) a {
+       background:#00c300 url(../images/ico_naver.png) no-repeat 10px center/50px 50px;
+   }
+   #login .loginbox .sns_login li:nth-child(3) a {
+       background:#405ea9 url(../images/ico_face.png) no-repeat 10px center/50px 50px;
+   }
+   #login .loginbox .sns_login li:nth-child(4) a {
+       background:#888888 url(../images/ico_cellphone.png) no-repeat 10px center/50px 50px;
+   }
+   
+   
+   /* join.html 회원가입페이지 */
+   #join { margin:30px auto }
+   .appForm fieldset { border:none }
+   .appForm legend { display:none }
+   .appForm .nopilsoo { 
+       padding-left:12px; 
+   }
+   .appForm .info_pilsoo {
+       padding-bottom:10px; 
+       border-bottom:2px solid #000; 
+       font-size:15px; color:#f00;}
+   .appForm .pilsoo_item::before {content:"*"; 
+       padding-right:8px; position:relative; top:4px; 
+       font-weight:bold; font-size:17px; color:#f00;}
+   .appForm .app_list { padding:15px 0;
+       border-bottom:1px solid #ddd }
+   .appForm .app_list li { padding:8px 0}   
+   .appForm .app_list li .tit_lbl { 
+       float:left; width:150px; line-height:42px;  
+       font-weight:bold; font-size:17px; letter-spacing: -2px;}  
+   .appForm .app_list li .app_content {float:right; width:calc(100% - 150px); } 
+   .appForm input[type=text],
+   .appForm input[type=password],
+   .appForm input[type=date] { height:45px; 
+       border:1px solid #ccc; width:100%; padding:0 10px; 
+       transition:all 0.5s
+   }
+   .appForm input[type=text]:hover,
+   .appForm input[type=password]:hover,
+   .appForm input[type=date]:hover { background:pink; border-color:red }
+   
+   .appForm input.w160 { width:160px }   
+   .appForm  select { width:160px; height:45px;
+       border:1px solid #ccc; padding:10px;
+       appearance: none; 
+       background:url(../images/ico_selectArr.png) no-repeat right center;
+    }
+    .appForm .idcheck {
+       display:inline-block;
+       height:45px; 
+       line-height:45px; 
+       padding:0 10px;
+       background:#aaa;
+       border-radius:10px; 
+       font-size:14px; color:#fff; 
+   }
+   .appForm #pwdarea { position:relative; }
+   .appForm #pwdarea .pwdhint {
+       position:absolute; top:0; left:0; 
+       padding:15px 0 15px 10px; 
+       width:100%; font-size:14px; color:#f00; 
+       background:lime; transition:all 0.5s; 
+   }
+   .appForm #pwdarea .pwdhint.on {
+       padding:0px 0 0px 10px; 
+       color:blue; top:-14px;
+   }
+   .appForm .radio_area,
+   .appForm .checkbox_area { height:45px; } 
+   .appForm .css-radio,
+   .appForm .css-checkbox { display:none } 
+   .appForm .css-radio + label,
+   .appForm .css-checkbox + label { margin-right:15px; 
+       padding-left:20px; 
+       margin-top:13px; display:inline-block;
+   }
+   .appForm .css-radio + label {
+       background:url(../images/bg_radio.png) no-repeat 0 0px;
+       height:15px; line-height:15px; 
+   }
+   .appForm .css-radio:checked + label {
+       background-position:0 -50px;
+   }
+   .appForm .css-checkbox + label {
+       background:url(../images/bg_checkbox.png) no-repeat 0 0px/15px auto;
+       height:15px; line-height:15px; 
+   }
+   .appForm .css-checkbox:checked + label {
+       background-position:0 -15px;
+   }
+   .appForm #content_lbl { width:100%; height:245px; 
+       border: 1px solid #ccc;
+       padding: 10px;
+       resize:unset;
+   }
+   .appForm .btn_line { text-align:center; margin:30px 0;  }
+   .appForm .btn_line button {
+       background:#384d75; 
+       font-size:20px; color:#fff;
+       width:125px; height:50px; 
+       border-radius:5px; 
+   }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    #section article:nth-child(2) > div {
+        width:100%; float:left; 
+        border:0px solid #000;
+        text-align:center; overflow:hidden;
+        margin:10px 0; 
+        padding:0 10px; 
+    }
+
+    #section article:nth-child(2) > div:nth-child(2) {
+        margin:10px 0%; 
+    }
+
+
+    #footer .bottom-menu h1 { width:100%; float:left; padding:0 20px; text-align:center;  }
+    #footer .bottom-menu .row div { width:100%; float:left;  }
+    #footer .bottom-menu .depth1 > li:nth-child(1) { 
+        border-left:0px solid #999; 
+    }
+
+
+    /* 회원가입 */
+    .appForm .app_list li .tit_lbl { 
+        float:left; width:100%; line-height:42px;  
+        font-weight:bold; font-size:17px; letter-spacing: -2px;}  
+    .appForm .app_list li .app_content {float:right; width:100%; } 
+
+
+    /* 공지사항 */
+    #notice .board col:nth-child(1) { width:43px; display:none }
+    #notice .board col:nth-child(3) { width:54px; display:none }
+    #notice .board col:nth-child(5) { width:56px; display:none }
+
+    #notice .board table th:nth-child(1) { display:none }
+    #notice .board table th:nth-child(3) { display:none }
+    #notice .board table th:nth-child(5) { display:none }
+    #notice .board table td:nth-child(1) { display:none }
+    #notice .board table td:nth-child(3) { display:none }
+    #notice .board table td:nth-child(5) { display:none }
+
+}

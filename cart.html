@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/rwd.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+    <div class="header"></div>
+
+    <style>
+        .cartBox { padding:100px 0; }
+        .cartBox .cartInfo { text-align:center; margin:20px 0;  }
+        .cartBox .cartInfo p { margin:20px 0 }
+        .cartBox table col:nth-child(1) { width:50px }
+        .cartBox table col:nth-child(2) { width:100px }
+        .cartBox table col:nth-child(3) { width:auto }
+        .cartBox table col:nth-child(4) { width:50px }
+        .cartBox table col:nth-child(5) { width:100px }
+        .cartBox table col:nth-child(6) { width:100px }
+        .cartBox table thead th { padding:10px 0 }
+        .cartBox table tbody td { padding:5px 0; text-align:center }
+    </style>
+    <section class="cartBox row">
+        <div class="cartInfo">
+            <h2>장바구니</h2>
+            <p></p>
+        </div>
+        <table border="1">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>상품이미지</th>
+                    <th>상품정보</th>
+                    <th>수량</th>
+                    <th>상품금액</th>
+                    <th>배송비</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+    <div class="footer"></div>
+
+    <script src="./js/common.js"></script>
+    <script>
+        let cartList = JSON.parse(localStorage.getItem("allItem"))
+        let deliveryFee = 6000
+        let trlist = "<tbody>"
+        if (cartList) {
+            cartList.forEach((value, index)=>{
+                trlist += `<tr>`
+                trlist += `<td><input type="checkbox"></td>`
+                trlist += `<td><img src="./images/${value.photo}"></td>`
+                trlist += `<td>${value.name}<br>${value.price}</td>`
+                trlist += `<td>${value.quantity}</td>`
+                trlist += `<td>${value.quantity*value.price}</td>`
+                trlist += `<td>${deliveryFee}</td>`
+                trlist += `</tr>`
+            })
+            trlist += `</tbody>`
+            trlist += `<tfoot>`
+            trlist += `<tr>`
+            trlist += `<td colspan="6"></td>`
+            trlist += `</tr>`
+            trlist += `</tfoot>`    
+
+            $('table tbody').remove()
+            $('table tfoot').remove()
+            $('table').append(trlist) 
+        } else {
+            $('.cartInfo p').text("장바구니가 비어 있습니다.")
+        }
+    </script>
+    
+
+</body>
+</html>

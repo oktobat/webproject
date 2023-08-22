@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/rwd.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+    <div class="header"></div>
+    
+    <section id="notice">
+        <div class="row">
+            <div class="title">
+                <h2><span></span>Notice</h2>
+                <p><span></span>홈페이지의 공지사항을 볼 수 있습니다.</p>
+            </div>
+            <div class="board">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>날짜</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>11</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>6장 9-(2)번 정답(학생용) 오류 수정 안내</td>
+                            <td>김은영</td>
+                            <td>2023-07-28</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>   
+            </div>
+            <div class="btn">
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>목록</span>
+                </a>
+                <form action="#" method="post" name="searchbox" class="searchbox">
+                    <fieldset>
+                        <legend>검색</legend>
+                        <input type="text">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <label for="">검색</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>검색범위</legend>
+                        <select name="searchTit" id="searchTit">
+                            <option value="opt1">제목+내용</option>
+                            <option value="opt2">제목</option>
+                            <option value="opt3">내용</option>
+                            <option value="opt4">댓글</option>
+                            <option value="opt5">이름</option>
+                            <option value="opt6">닉네임</option>
+                            <option value="opt7">아이디</option>
+                            <option value="opt8">태그</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer"></div>
+
+    <script src="./js/common.js"></script>
+</body>
+</html>
